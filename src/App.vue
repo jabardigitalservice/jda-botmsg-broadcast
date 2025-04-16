@@ -19,7 +19,7 @@ const sendMessage = async () => {
   loading.value = true
   try {
     await Promise.all(
-      GROUP_IDS.map(async groupId => {
+      GROUP_IDS.map(async (groupId: string | number) => {
         try {
           const response = await axios.post(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
             chat_id: groupId,
