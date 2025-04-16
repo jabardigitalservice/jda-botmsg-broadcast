@@ -8,7 +8,7 @@ const loading = ref(false)
 const toast = useToast()
 
 const BOT_TOKEN = import.meta.env.VITE_TELEGRAM_BOT_TOKEN
-const GROUP_IDS = import.meta.env.VITE_TELEGRAM_GROUP_IDS.split(',')
+const GROUP_IDS = import.meta.env.VITE_TELEGRAM_GROUP_IDS
 
 const sendMessage = async () => {
   if (!message.value.trim()) {
